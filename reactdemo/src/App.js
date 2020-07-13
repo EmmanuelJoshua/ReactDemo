@@ -1,16 +1,19 @@
 import React from 'react';
 import './App.css';
 import 'tachyons';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
 
 function App() {
   return (
     <div className='App-header'>
-        <h1>I'm Joshua Emmanuel</h1>
+      <Header/>
         <ul>
           <li>Programmer</li>
           <li>Geek</li>
           <li>Fun Haver</li>
         </ul>
+        <Footer/>
     </div>
   );
 }
