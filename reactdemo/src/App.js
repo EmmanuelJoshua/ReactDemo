@@ -51,7 +51,7 @@ class App extends Component {
           </Nav>
         </Container>
 
-        <Container className='Main-Header text-center pt-3'>
+        <Container className='Main-Header text-center'>
           <h1 className=''>
             Make your life simpler, <br />
             get more
