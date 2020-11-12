@@ -1,75 +1,125 @@
+@font-face {
+  font-family: 'Fuse';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Fuse'), url(./assets/Fuse-Regular.otf)  format('otf');
+  }
+
+  @font-face {
+    font-family: 'Torch';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Torch'), url(./assets/Torch-Regular.woff)  format('woff');
+    }
+
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-image: radial-gradient( circle, #254A7D, #254674, #253E62);
+  /* background-color: #253E62; */
+  height: 100vh;
 }
 
-.Nav-bar{
-  background-color: rgb(36, 20, 41);
-  width: 100%;
-  text-align: center;
+.Nav-Header p{
+  color: white;
+  font-size: 1.4em;
+  letter-spacing: 4px;
+  font-family: 'Torch';
 }
 
-.Footer{
-  width: 100%;
-  bottom: 0;
-  position: absolute;
-  text-align: center;
-  background-color: #ffffff;
-  color: #282c34;
+.Nav-Header .SignUp{
+  font-size: 0.9em;
+  color: white;
+  font-family: 'Fuse';
 }
 
-.product-main-bg{
-  background-color: white;
-  width: 320px;
-  text-align: center;
-  padding: 14px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+.Nav-Header .Nav-Items{
+  font-size: 0.95em;
+  color: #4975B6;
+  font-family: 'Fuse';
 }
 
-.product-main-bg input{
-  width: 300px;
-  margin-bottom: 15px;
-  background-color: white;
-  border: 0px solid transparent;
-  /* cursor: pointer; */
-  outline: 0px;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-}
-
-.product-main-bg .signup-btn {
+.Nav-Header .Post-Btn {
+  text-transform: uppercase;
+  font-family: 'Fuse';
   color: white;
   padding: 8px;
-  font-weight: 500;
-  font-size: 16px !important;
-  background-color: #292F41 !important;
+  letter-spacing: 1px;
+  font-size: 13px !important;
+  background-color: #FA6A8C !important;
   width: 120px !important;
+  border: 0px;
+  border-radius: 100px;
   transition: all 0.5s ease-in-out;
-   box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 }
 
-.product-main-bg h1{
-  font-family: sans-serif;
+.Main-Header h1{
+  color: white;
+  font-size: 3.3em;
+  letter-spacing: 2px;
+  font-family: 'Fuse';
   font-weight: 500;
-  font-size: 4em;
 }
 
-.product-item{
-  color: #282c34;
-  /* margin: 10px; */
-  border-radius: 5px;
-  width: 290px;
-  display: inline-flex;
+.Main-Header .SignUp-Btn{
+  text-transform: uppercase;
+  font-family: 'Fuse';
+  color: white;
+  padding: 10px;
+  letter-spacing: 1px;
+  font-size: 15px !important;
+  background-color: #FA6A8C !important;
+  width: 120px !important;
+  border: 0px;
+  border-radius: 100px;
+  transition: all 0.5s ease-in-out;
 }
 
-.product-item h4{
+/* The device with borders */
+.smartphone {
   margin-left: auto;
-  margin-right: 15px;
-  /* right: 0; */
+  margin-right: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 340px;
+  height: 285px;
+  border: 13px white solid;
+  border-top-width: 60px;
+  border-bottom-width: 0px;
+  border-radius: 36px 36px 0 0;
+}
+
+.smartphone:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+
+/* The screen (or content) of the device */
+.smartphone .content {
+  height: 225px;
+  background: white;
+}
+
+@media screen and (max-width: 800px) {
+  .App-header {
+    height: 100%;
+  }
+
+  .smartphone {
+    position: relative !important;
+    width: 250px;
+    height: 220px;
+  }
+
+  .smartphone .content {
+    height: 160px;
+  }
 }
